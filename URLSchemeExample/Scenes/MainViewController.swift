@@ -26,6 +26,19 @@ final class MainViewController: UIViewController {
         )
     }
     
+    @IBAction func didTapTransferKakaoMapButton(_ sender: UIButton) {
+        guard
+            let openUrlScheme = URL.init(string: "kakaomap://open"),
+            UIApplication.shared.canOpenURL(openUrlScheme)
+        else {
+            // kakaomap 을 열 수 없음.
+            openAppStore(id: "id304608425") // kakaomap ID
+            return
+        }
+        
+        UIApplication.shared.open(openUrlScheme)
+    }
+    
     @IBAction func didTapSendMessageButton(_ sender: UIButton) {
         guard
             let url = URL.init(string: "sms:1-888-555-1212"),
@@ -37,5 +50,17 @@ final class MainViewController: UIViewController {
             options: [ : ],
             completionHandler: nil
         )
+    }
+    
+    private func openAppStore(id: String) {
+        guard
+            let url = URL.init(string: "itms-apps://itunes.apple.com/app/\(id)"),
+            UIApplication.shared.canOpenURL(url)
+        else {
+            // 앱스토어를 열 수 없음.
+            return
+        }
+        
+        UIApplication.shared.open(url)
     }
 }
