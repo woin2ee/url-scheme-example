@@ -24,12 +24,22 @@
                                     <action selector="didTapTransferMapAppButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="azx-lW-xSU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jji-lP-HEV">
+                                <rect key="frame" x="156.5" y="256.5" width="101" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="메세지 보내기"/>
+                                <connections>
+                                    <action selector="didTapSendMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8Z-Pa-F8o"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="jji-lP-HEV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="03E-1R-N5G"/>
                             <constraint firstItem="T2v-DJ-zoZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjN-P3-Cen"/>
                             <constraint firstItem="T2v-DJ-zoZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.4" id="rVB-VG-XYK"/>
+                            <constraint firstItem="jji-lP-HEV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.6" id="w2x-0V-ev8"/>
                         </constraints>
                     </view>
                 </viewController>
