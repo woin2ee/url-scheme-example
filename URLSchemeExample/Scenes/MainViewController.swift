@@ -19,11 +19,7 @@ final class MainViewController: UIViewController {
             UIApplication.shared.canOpenURL(url)
         else { return }
         
-        UIApplication.shared.open(
-            url,
-            options: [ : ],
-            completionHandler: nil
-        )
+        UIApplication.shared.open(url)
     }
     
     @IBAction func didTapTransferKakaoMapButton(_ sender: UIButton) {
@@ -45,11 +41,7 @@ final class MainViewController: UIViewController {
             UIApplication.shared.canOpenURL(url)
         else { return }
         
-        UIApplication.shared.open(
-            url,
-            options: [ : ],
-            completionHandler: nil
-        )
+        UIApplication.shared.open(url)
     }
     
     private func openAppStore(id: String) {
