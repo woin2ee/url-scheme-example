@@ -27,7 +27,6 @@ final class MainViewController: UIViewController {
             let openUrlScheme = URL.init(string: "kakaomap://open"),
             UIApplication.shared.canOpenURL(openUrlScheme)
         else {
-            // kakaomap 을 열 수 없음.
             openAppStore(id: "id304608425") // kakaomap ID
             return
         }
@@ -49,7 +48,6 @@ final class MainViewController: UIViewController {
             let url = URL.init(string: "itms-apps://itunes.apple.com/app/\(id)"),
             UIApplication.shared.canOpenURL(url)
         else {
-            // 앱스토어를 열 수 없음.
             return
         }
         
